@@ -84,19 +84,16 @@ class Home extends CI_Controller {
 
 	public function editTrip() {
 		$data = [
-			'nama_project' => $this->input->post('nama_project_edit'),
-			'deskripsi' => $this->input->post('deskripsi_edit'),
-			'pic' => $this->input->post('pic_edit'),
-			'start_date' => $this->input->post('start_date_edit'),
-			'due_date' => $this->input->post('due_date_edit'),
-			'priority' => $this->input->post('priority_edit'),
-			'status' => $this->input->post('status_edit'),
-			'task_complexity' => $this->input->post('task_complexity_edit')
+			'id_driver' => $this->input->post('driver_edit'),
+			'id_cost' => $this->input->post('id_cost_edit'),
+			'date_trip' => $this->input->post('date_trip_edit'),
+			'actual_time' => $this->input->post('actual_time_edit'),
+			'total_cost' => $this->input->post('total_cost_edit')
 		];
 
-		$id = $this->input->post('id_project_edit');
+		$id = $this->input->post('id_trip_edit');
 		
-		$updateData = $this->M_home->updateProject($data, $id);
+		$updateData = $this->M_home->updateTrip($data, $id);
 
 		if ($updateData > 0) {
 			$this->session->set_flashdata('success', 'Trip berhasil diubah');

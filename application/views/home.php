@@ -233,8 +233,8 @@
                             <input type="number" class="form-control" id="total_cost_edit" name="total_cost_edit" readonly>
                         </div>
                     </div>
-                    <input type="text" name="id_trip_edit" id="id_trip_edit">
-                    <input type="text" name="id_cost_edit" id="id_cost_edit">
+                    <input type="hidden" name="id_trip_edit" id="id_trip_edit">
+                    <input type="hidden" name="id_cost_edit" id="id_cost_edit">
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <button type="submit" class="btn btn-primary">Save Change</button>
